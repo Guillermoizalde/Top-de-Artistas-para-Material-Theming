@@ -24,6 +24,12 @@
         <item name="android:layout_margin">@dimen/imageView_margin</item>
     </style>
 
+    <style name="ItemLarge" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:maxLines">1</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+
     <style name="TextAppearance.Design.CollapsingToolbar.Expanded.Shadow">
         <item name="android:shadowDy">2</item>
         <item name="android:shadowDx">2</item>

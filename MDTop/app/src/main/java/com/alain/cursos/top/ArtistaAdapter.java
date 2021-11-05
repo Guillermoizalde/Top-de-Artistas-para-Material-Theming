@@ -57,13 +57,14 @@ public class ArtistaAdapter extends RecyclerView.Adapter<ArtistaAdapter.ViewHold
         holder.setListener(artista, listener);
 
         holder.tvNombre.setText(artista.getNombreCompleto());
+        holder.tvNote.setText(artista.getNotas());
         holder.tvOrden.setText(String.valueOf(position+1));
 
         if (artista.getFotoUrl() != null){
             RequestOptions options = new RequestOptions()
-                .diskCacheStrategy(DiskCacheStrategy.ALL)
-                .centerCrop()
-                .placeholder(R.drawable.ic_sentiment_satisfied);
+                    .diskCacheStrategy(DiskCacheStrategy.ALL)
+                    .centerCrop()
+                    .placeholder(R.drawable.ic_sentiment_satisfied);
 
             Glide.with(context)
                     .load(artista.getFotoUrl())
@@ -93,13 +94,15 @@ public class ArtistaAdapter extends RecyclerView.Adapter<ArtistaAdapter.ViewHold
 
     class ViewHolder extends RecyclerView.ViewHolder {
         @BindView(R.id.imgFoto)
-        AppCompatImageView imgFoto;
+        CircleImageView imgFoto;
         @BindView(R.id.tvNombre)
         AppCompatTextView tvNombre;
+        @BindView(R.id.tvNote)
+        AppCompatTextView tvNote;
         @BindView(R.id.tvOrden)
         AppCompatTextView tvOrden;
         @BindView(R.id.containerMain)
-        RelativeLayout containerMain;
+        ConstraintLayout containerMain;
 
         ViewHolder(View itemView) {
             super(itemView);
@@ -112,6 +115,8 @@ public class ArtistaAdapter extends RecyclerView.Adapter<ArtistaAdapter.ViewHold
             containerMain.setOnLongClickListener(view -> {
                 listener.onLongItemClick(artista);
                 return true;
+
+
             });
         }
     }
