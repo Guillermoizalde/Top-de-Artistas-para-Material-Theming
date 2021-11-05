@@ -77,6 +77,44 @@ public class AddArtistActivity extends AppCompatActivity implements DatePickerDi
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
     }
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:baselineAligned="false">
+
+            <com.google.android.material.textfield.TextInputLayout
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="50"
+    app:startIconDrawable="@drawable/ic_calendar"
+    style="@style/MyTheme.DayNight.TextInputLayout">
+                <com.google.android.material.textfield.TextInputEditText
+    android:id="@+id/etFechaNacimiento"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="@string/artist_hint_fechaNacimiento"
+    android:focusableInTouchMode="false"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/tilEstatura"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="50"
+    android:layout_marginStart="@dimen/common_padding_min"
+    android:layout_marginEnd="@dimen/common_padding_min"
+    app:helperText="@string/addArtist_help_estatura"
+    style="@style/MyTheme.DayNight.TextInputLayout">
+                <com.google.android.material.textfield.TextInputEditText
+    android:id="@+id/etEstatura"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="@string/artist_hint_estatura"
+    android:inputType="number"
+    android:maxLength="@integer/estatura_maxLenght"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
 
     private void configArtista(Intent intent) {
         mArtista = new Artista();
