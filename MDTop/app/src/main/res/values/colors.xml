@@ -6,11 +6,27 @@
     <color name="white_t">#88ffffff</color>
 
     <!--?xml version="1.0" encoding="UTF-8"?-->
-        <color name="color_primary">#42a5f5</color>
-        <color name="color_primary_variant">#0077c2</color>
-        <color name="color_secondary">#42a5f4</color>
-        <color name="color_secondary_variant">#0077c1</color>
+    <color name="colorPrimary">#616161</color>
+    <color name="colorPrimaryDark">#424242</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white_t">#88ffffff</color>
 
-        <color name="color_on_secondary">#000000</color>
-        <color name="color_on_secondary">#000000</color>
+    <color name="color_primary">#f48fb1</color>
+    <color name="color_primary_variant">#bf5f82</color>
+    <color name="color_secondary">#424242</color>
+    <color name="color_secondary_variant">#1b1b1b</color>
+
+    <color name="color_background">#f5f5f5</color>
+    <color name="color_surface">#ffffff</color>
+    <color name="color_error">#d50000</color>
+
+    <color name="color_on_primary">#000000</color>
+    <color name="color_on_secondary">#ffffff</color>
+    <color name="color_on_background">#000000</color>
+    <color name="color_on_surface">#000000</color>
+    <color name="color_on_error">#ffffff</color>
+
+    <color name="color_divider">#1E000000</color>
+
+
 </resources>
